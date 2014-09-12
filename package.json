@@ -1,0 +1,13 @@
+{
+  "name": "yadda-webdriverjs",
+  "description": "Packages used for running user story testing via mocha",
+  "author": "Kjell Erichsen",
+  "devDependencies": {
+    "yadda": "^0.11.0",
+    "mocha": "~1.12.0",
+    "selenium-webdriver": "2.35.x",
+    "glob": "~3.2.x",
+    "xunit-file" : "0.0.4"
+  },
+  "engine": "node >= 0.8.0"
+}
