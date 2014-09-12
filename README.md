@@ -8,7 +8,9 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
 1. DOWNLOAD, INSTALL/UNPACK and ADD TO PATH/ENVIRONMENT:
 
  node.js ->  http://nodejs.org/download/
+ 
  phantomjs -> http://phantomjs.org/download.html 
+ 
  chromedriver -> http://chromedriver.storage.googleapis.com/index.html?path=2.9/
 
 2. INSTALL NODE PACKAGES:
@@ -18,14 +20,17 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
 3. SAMPLE TESTS (In Norwegian)
 
  features\YR-stedssøk.feature
+ 
  features\YR-stedssøk-steps.js
 
 4. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
 
  runtests.bat android
+ 
  runtests.bat someprofile
 
 5. RUN LOCAL YADDA-BDD (PHANTOMJS)
 
  phantomjs --webdriver=8001
+ 
  runtests.bat phantomjs                        
