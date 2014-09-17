@@ -27,7 +27,7 @@ exports.steps = {
 			ctx.assert.elementContainsText('#pageContent ol.list a[href*="'+sted+'"]', sted);		
         });
 
-		library.så('jeg skal kunne velge "$STED" fra søkelisten', function(sted){
+		library.og('jeg skal kunne velge "$STED" fra søkelisten', function(sted){
 			ctx.driver.findElement({ css: '#pageContent ol.list a[href*="'+sted+'"]' }).click()
 			.then(function() {
 				ctx.assert.elementContainsText('#pageHeader div.title h1', sted);		

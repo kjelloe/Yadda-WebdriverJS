@@ -9,4 +9,4 @@ Scenario: Som bruker vil jeg at det skal komme forslag til steder, når jeg skri
 
 	Når jeg søker etter stedet "Berg"
 	så skal "Berg" vises i søkeresultat
-	så jeg skal kunne velge "Berg" fra søkelisten
+	og jeg skal kunne velge "Berg" fra søkelisten
