@@ -3,7 +3,7 @@
 exports.steps = {
 	using: function(library, ctx) {
 		library.når("jeg starter yr2014 med $STED i søkefeltet", function(sted) {
-			ctx.driver.get('http://yr.cloudapp.net/nb/')
+			ctx.driver.get(ctx.testUrl)
 			.then(function() {
 				ctx.driver.findElement({ css: '#searchInput'}).sendKeys(sted);
 				ctx.driver.findElement({ css: 'button[type="submit"]'}).click();
@@ -16,7 +16,7 @@ exports.steps = {
 		});
 		
 		library.når('jeg søker etter stedet "$STED"', function(sted) {
-			ctx.driver.get('http://yr.cloudapp.net/nb/')
+			ctx.driver.get(ctx.testUrl)
 			.then(function() {
 				ctx.driver.findElement( { css: '#searchInput' } ).sendKeys(sted);
 				ctx.driver.findElement( { css: 'button[type="submit"]' } ).click();				

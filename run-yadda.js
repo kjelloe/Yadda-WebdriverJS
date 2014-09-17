@@ -15,6 +15,13 @@ console.log('Using test environment: "' + testEnv + '"');
 var capabilities = listEnvironments[testEnv];
 if(!capabilities) { throw new Error('Invalid "testenv" provided: ' + testEnv); }
 
+// Finding test url to use
+var testurl = (process.env.testurl? process.env.testurl : null);
+if(testurl==null)
+	throw new Error('ERROR: No test url provided for test. Required:');
+else
+	console.log('Using testurl "'+testurl+'"');
+
 // Finding test group (folders) to use
 var testGroup = (process.env.testgroup? 'features/'+process.env.testgroup +'/' : 'features');
 
@@ -25,21 +32,22 @@ if(listFeatures.list().length==0) // Force test failure if no tests found
 	throw new Error('ERROR: No feature files found for testgroup "'+testGroup+'"');
 else
 	console.log('Found '+listFeatures.list().length+' feature file(s) using test group/folder: "' + testGroup + '"');
-	
+		
 // Run each feature file found using mocha
 listFeatures.each(function(file) {
 	var stepFile = file.replace('.feature', '-steps.js');
 
     featureFile(file, function(feature) {
-		
-        before(function(done) {
+		        
+		before(function(done) {
+			console.log('  [File: "' + file + '"]');		
 			driver = new webdriver.Builder()
 				.usingServer(capabilities.serverurl)
 				.withCapabilities(capabilities)
 				.build();
 			driver.manage().timeouts().implicitlyWait(3000);
-			var assertHelper = require('./assertHelper').init(driver); // Load assert helper for easier webdriverjs assertions			
-			require("./"+stepFile).steps.using(library, { driver: driver, assert : assertHelper });						
+			var assertHelper = require('./assertHelper').init(driver); // Load assert helper for easier webdriverjs assertions						
+			require("./"+stepFile).steps.using(library, { driver: driver, assert : assertHelper, testUrl: testurl });						
 			done();			
         });
 
