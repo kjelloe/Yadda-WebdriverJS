@@ -25,7 +25,7 @@ if(listFeatures.list().length==0) // Force test failure if no tests found
 	throw new Error('ERROR: No feature files found for testgroup "'+testGroup+'"');
 else
 	console.log('Found '+listFeatures.list().length+' feature file(s) using test group/folder: "' + testGroup + '"');
-
+	
 // Run each feature file found using mocha
 listFeatures.each(function(file) {
 	var stepFile = file.replace('.feature', '-steps.js');
@@ -37,14 +37,16 @@ listFeatures.each(function(file) {
 				.usingServer(capabilities.serverurl)
 				.withCapabilities(capabilities)
 				.build();
-			driver.manage().timeouts().implicitlyWait(15000);
-			require("./"+stepFile).steps.using(library, { driver: driver });						
+			driver.manage().timeouts().implicitlyWait(3000);
+			var assertHelper = require('./assertHelper').init(driver); // Load assert helper for easier webdriverjs assertions			
+			require("./"+stepFile).steps.using(library, { driver: driver, assert : assertHelper });						
 			done();			
         });
 
         scenarios(feature.scenarios, function(scenario) {			
             steps(scenario.steps, function(step, done) {
                 executeInFlow(function() {					
+					var assertHelper = require('./assertHelper').init(driver); // Load assert helper for easier webdriverjs assertions			
                     new Yadda.Yadda(library, { driver: driver }).yadda(step);
                 }, done);
             });
