@@ -17,20 +17,28 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
 
  npm install
 
-3. SAMPLE TESTS (In Norwegian)
+3. SAMPLE FEATURE/TESTS 
 
- features\YR-stedssøk.feature
+ Examples in Norwegian are ready to run in:
+
+  features\search\YR-stedssøk.feature 
  
- features\YR-stedssøk-steps.js
+  features\search\YR-stedssøk-steps.js
+ 
+ Examples in English are located in:
+ 
+  example-features\en\YR-search.feature
+  
+  example-features\en\YR-search-steps.js
 
 4. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
 
- runtests.bat android
+ runtests.bat android baseUrlToTest
  
- runtests.bat someprofile
+ runtests.bat someprofile baseUrlToTest optionalTestGroupFolder
 
 5. RUN LOCAL YADDA-BDD (PHANTOMJS)
 
  phantomjs --webdriver=8001
  
- runtests.bat phantomjs                        
+ runtests.bat phantomjs baseUrlToTest optionalTestGroupFolder            
