@@ -33,7 +33,7 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
 
 4. CONFIGURE TEST PROFILES/CONFIGURATION
 
-Edit config.js and add or remove configuration profiles. By default 1 phantomjs and 2 browserstack profiles are included.
+ Edit config.js and add or remove configuration profiles. By default 1 phantomjs and 2 browserstack profiles are included.
     
 5. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
 
