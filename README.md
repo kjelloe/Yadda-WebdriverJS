@@ -31,13 +31,17 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
   
   example-features\en\YR-search-steps.js
 
-4. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
+4. CONFIGURE TEST PROFILES/CONFIGURATION
+
+Edit config.js and add or remove configuration profiles. By default 1 phantomjs and 2 browserstack profiles are included.
+    
+5. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
 
  runtests.bat android baseUrlToTest
  
  runtests.bat someprofile baseUrlToTest optionalTestGroupFolder
 
-5. RUN LOCAL YADDA-BDD (PHANTOMJS)
+6. RUN LOCAL YADDA-BDD (PHANTOMJS)
 
  phantomjs --webdriver=8001
  
