@@ -1,48 +1,32 @@
-Yadda-WebdriverJS
-=================
+﻿Brukerhistorie-testing
+---------------------
 
-Demonstration of how to use a BDD-style approach to crossbrowser testing using Yadda-Mocha-Webdriverjs-[Browserstack|SauceLabs|PhantomJS]
-Describe user stories in Yadda (https://github.com/acuminous/yadda), then map them to HTML/DOM operations in WebdriverJS. 
-This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserStack, SauceLabs etc) crossbrowser testing of the user stories.
+**Kjøring mot public url**
 
-1. DOWNLOAD, INSTALL/UNPACK and ADD TO PATH/ENVIRONMENT:
+Start scriptet:
 
- node.js ->  http://nodejs.org/download/
- 
- phantomjs -> http://phantomjs.org/download.html 
- 
- chromedriver -> http://chromedriver.storage.googleapis.com/index.html?path=2.9/
+```
+powershell -File "C:\git\devops\Testing.Integration\BDD-yadda-client.ps1" -rootPath:"C:\git\beta.yr.no" -testUrl:"http://url-der-yr-er-public-tilgjengelig" -testGroup:"brukerhistorier"
+```
 
-2. INSTALL NODE PACKAGES:
+**Kjøring mot localhost**
 
- npm install
+Gjør følgende for å kjøre brukerhistorie-crossbrowsertesting på browserstack mot en website på en port på localhost:
 
-3. SAMPLE FEATURE/TESTS 
+1.	Først, logg inn på BrowserStack gå til https://www.browserstack.com/automate
+2.	Trykk + ved siden av ***«Username and Access Keys»***
+3.	Kopier ut «Access key» hash’en som står der ,  som ser slik ut: ***XydaRq3Q7h8idU51YQbz***
+4.	Last ned browserstack sin localhost-client(proxy) for ditt os på https://www.browserstack.com/local-testing#command-line og legg den i en passende katalog.
+5.	Åpne konfigurasjonfilen for Yadda-BDD på GIT\beta.yr.no\test\bdd-yadda\config.js og
+Legg inn en gyldig bruker i browserstack.user og nøkkelen fra punkt 3 ala ***browserstack.key = ‘XydaRq3Q7h8idU51YQbz’***.
+Sjekk også at det står browserstack.local = true for localhost-testing.
+6.	Start et console/command-shell og gå til katalogen i punkt 4, hvor du starter browserstack-klienten med nøkkelen fra punkt 3 ala: 
+***BrowserStackLocal.exe XydaRq3Q7h8idU51YQbz -onlyAutomate***
+7.	Start YR2014 node/webserver på en lokal url, f.eks localhost:3000 (Spør Bård eller Pope for latest start-oppsett)
+8.	Se over alle konfigurerte browserprofiles i konfigurasjonen - navnene er definert som listEnvironments['NNNN'] i ***GIT\beta.yr.no\test\bdd-yadda\config.js***
+9.	Så er det bare å starte Yadda-BDD med en av de mange konfigurerte profilene, for eksempel «iphone» eller et komma-separert sett av profiler som «win8-opera,mac-chrome,android-galaxy» mot «localhost:3000» på dette viset: ```powershell -File "\git\devops\Testing.Integration\BDD-yadda-client.ps1" -rootPath:"\git\beta.yr.no" -testUrl:"http://localhost:3000" -testGroup
+:"brukerhistorier" -browserProfiles:"win8-ie11,win8-opera,mac-chrome,iphone5,ipad,android-galaxy"```
 
- Examples in Norwegian are ready to run in:
+PS: Hvis testen ikke ser ut til å starte, sjekke i listen over kjørte automatiserte tester på venstre side av https://www.browserstack.com/automate Der står det også hvilken device/os og brower-versjon den da har tolket konfigurasjonen som.
 
-  features\search\YR-stedss�k.feature 
- 
-  features\search\YR-stedss�k-steps.js
- 
- Examples in English are located in:
- 
-  example-features\en\YR-search.feature
-  
-  example-features\en\YR-search-steps.js
-
-4. CONFIGURE TEST PROFILES/CONFIGURATION
-
- Edit config.js and add or remove configuration profiles. By default 1 phantomjs and 2 browserstack profiles are included.
-    
-5. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
-
- runtests.bat android baseUrlToTest
- 
- runtests.bat someprofile baseUrlToTest optionalTestGroupFolder
-
-6. RUN LOCAL YADDA-BDD (PHANTOMJS)
-
- phantomjs --webdriver=8001
- 
- runtests.bat phantomjs baseUrlToTest optionalTestGroupFolder            
+Redigert på http://dillinger.io/

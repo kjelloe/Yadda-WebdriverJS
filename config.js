@@ -1,27 +1,235 @@
-// Setting up test environment configurations
+// Creating configurations available for crossbrowser testing
+var testEnvironments = new Array(); 
+
 module.exports = {
-    init: function () {
-		var listEnvironments = new Array();
-		listEnvironments['default'] = listEnvironments['phantomjs'] = {'browserName': 'phantomjs', 'serverurl': 'http://localhost:8001'};
-		listEnvironments['windows7'] = 
-		{ 'os' : 'Windows',
-		  'os_version' : '7',
-		  'browser' : 'internet explorer', 
-		  'browser_version': '10',
-		  'browserstack.user' : 'USERNAME_HERE',
-		  'browserstack.key' : 'PASSWORD_HERE',
-		  'browserstack.local' : false,
-		  'browserstack.debug' : true,
-		  'serverurl' : 'http://hub.browserstack.com/wd/hub'
+
+	init: function (browserStackUser, browserStackAccessKey, localTestUrl, testDebug) {
+	
+		// Setting up default test environment configuration 
+		var defaultSettings = {
+			'browserstack.user' : browserStackUser,
+			'browserstack.key' : browserStackAccessKey,
+			'browserstack.local' : (localTestUrl===undefined? false : localTestUrl),
+			'browserstack.debug' : (testDebug===undefined? true : testDebug),
+			'serverurl' : 'http://hub.browserstack.com/wd/hub',
+			'name': 'Test name',
+			'project': 'Project name',
+			'logType' : false
 		};
-		listEnvironments['android'] = 
-		{ 'browser' : 'android',
-		  'browserstack.user' : 'USERNAME_HERE',
-		  'browserstack.key' : 'PASSWORD_HERE',
-		  'browserstack.local' : false,
-		  'browserstack.debug' : true,
-		  'serverurl' : 'http://hub.browserstack.com/wd/hub'
+		
+		// Setting up all test profiles
+		testEnvironments['default'] = testEnvironments['phantomjs'] = {'browserName': 'phantomjs', 'serverurl': 'http://localhost:8001', 'logType' : 'browser'};
+		testEnvironments['win7-ie11'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '7',
+			'browser' : 'internet explorer', 
+			'browser_version': '11'
 		};
-		return listEnvironments;
+		testEnvironments['win7-ie10'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '7',
+			'browser' : 'internet explorer', 
+			'browser_version': '10'
+		};
+		testEnvironments['win7-ie9'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '7',
+			'browser' : 'internet explorer', 
+			'browser_version': '9'
+		};
+		testEnvironments['win7-ie8'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '7',
+			'browser' : 'internet explorer', 
+			'browser_version': '8'
+		};
+		testEnvironments['win8-ie10'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '8',
+			'browser' : 'internet explorer', 
+			'browser_version': '10'
+		};
+		testEnvironments['win8-ie11'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '8.1',
+			'browser' : 'internet explorer', 
+			'browser_version': '11'
+		};
+		testEnvironments['win8-firefox'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '8.1',
+			'browser' : 'firefox'
+		};		
+		testEnvironments['win8-chrome'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '8.1',
+			'browser' : 'chrome'
+		};		
+		testEnvironments['win8-opera'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : '8.1',
+			'browser' : 'opera'
+		};
+		testEnvironments['winxp-ie7'] = 
+		{ 
+			'os' : 'Windows',
+			'os_version' : 'xp',
+			'browser' : 'internet explorer', 
+			'browser_version': '7'
+		};
+		testEnvironments['mac-safari'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Mavericks',
+			'browser' : 'safari'
+		};
+		testEnvironments['mac-chrome'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Mavericks',
+			'browser' : 'chrome'
+		};
+		testEnvironments['mac-firefox'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Mavericks',
+			'browser' : 'firefox'
+		};
+		testEnvironments['mac-opera'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Mavericks',
+			'browser' : 'opera'
+		};		
+		testEnvironments['maclion-safari'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Lion',
+			'browser' : 'safari'
+		};
+		testEnvironments['maclion-chrome'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Lion',
+			'browser' : 'chrome'
+		};
+		testEnvironments['maclion-firefox'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Lion',
+			'browser' : 'firefox'
+		};
+		testEnvironments['maclion-opera'] = 
+		{ 
+			'os' : 'OS X',
+			'os_version' : 'Lion',
+			'browser' : 'opera'
+		};
+		testEnvironments['iphone6plus'] = 
+		{ 
+			'device' : 'iPhone 6 Plus'
+		};
+		testEnvironments['iphone6'] = 
+		{ 
+			'device' : 'iPhone 6'
+		};
+		testEnvironments['iphone5'] = 
+		{ 
+			'device' : 'iPhone 5'
+		};
+		testEnvironments['iphone5s'] = 
+		{ 
+			'device' : 'iPhone 5S'
+		};
+		testEnvironments['ipad'] = 
+		{ 
+			'device' : 'iPad 4th Gen'
+		};
+		testEnvironments['ipad-air'] = 
+		{ 
+			'device' : 'iPad Air'
+		};
+		testEnvironments['ipad-mini2'] = 
+		{ 
+			'device' : 'iPad Mini 2'
+		};
+		testEnvironments['ipad-mini'] = 
+		{ 
+			'device' : 'iPad mini Retina'
+		};
+		testEnvironments['android'] = 
+		{ 
+			'browser' : 'android'
+		};
+		testEnvironments['android-galaxy-tab'] = 
+		{ 
+			'device' : 'Samsung Galaxy Tab 4 10.1'
+		};
+		testEnvironments['android-galaxys3'] = 
+		{ 
+			'device' : 'Samsung Galaxy S III'
+		};
+		testEnvironments['android-galaxys2'] = 
+		{ 
+			'device' : 'Samsung Galaxy S2'
+		};
+		testEnvironments['android-galaxys-note2'] = 
+		{ 
+			'device' : 'Samsung Galaxy Note 2'
+		};
+		testEnvironments['android-galaxys5'] = 
+		{ 
+			'device' : 'Samsung Galaxy S5'
+		};
+		testEnvironments['android-nexus7'] = 
+		{ 
+			'device' : 'Google Nexus 7'
+		};
+		testEnvironments['android-nexus5'] = 
+		{ 
+			'device' : 'Google Nexus 5'
+		};
+		testEnvironments['android-htc'] = 
+		{ 
+			'device' : 'Google One M8'
+		};
+		testEnvironments['android-sony-xperia'] = 
+		{ 
+			'device' : 'Sony Xperia Tipo'
+		};
+		testEnvironments['android-kindle'] = 
+		{ 
+			'device' : 'Amazon Kindle Fire HDX 7'
+		};
+		
+		// Adding default config data if not specified for test environments
+		for(var testenv in testEnvironments) 
+			for(var defaultProp in defaultSettings) 
+				if(testEnvironments[testenv][defaultProp]===undefined) 
+					testEnvironments[testenv][defaultProp] = defaultSettings[defaultProp]; 
+		
+		return this;
+	},
+	// Get all test profiles
+	getTestProfile: function(profileName) {
+		return testEnvironments[profileName];
+	},
+	// List all profiles by start of profile name
+	getTestProfilesMatching : function(startOfProfileName) {
+		var matches = new Array();
+		for(var testenv in testEnvironments) {
+			if(testenv.indexOf(startOfProfileName)==0 || startOfProfileName===undefined)
+				matches[testenv] = testEnvironments[testenv];
+		}
+		return matches;		
 	}
 };
