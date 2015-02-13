@@ -3,7 +3,29 @@ var testEnvironments = new Array();
 
 module.exports = {
 
-	init: function (browserStackUser, browserStackAccessKey, localTestUrl, testDebug) {
+	init: function (browserStackUser, browserStackAccessKey, webdriverUri, localTestUrl, testDebug) {
+
+		// Helper: parse address 
+		_getHostAddress = function(uri, defaultHost, defaultPort) {
+			var addr = new Object();
+			if(uri===undefined) { // If no uri, use default
+				addr.protocol = 'http://';
+				addr.port = defaultPort;
+				addr.host = defaultHost;
+			} else { // Otherwise parse provided uri
+				var uriSplit = uri.replace(/http:\/\/|https:\/\//,'').split(':', 2);
+				addr.protocol = (uri.toLowerCase().indexOf('https')==0? 'https://' : 'http://');
+				if(uriSplit.length==0) {
+					throw new Error("Invalid webdriveruri specified:" + uri);
+				} else if(uriSplit.length<2) {
+					addr.port = defaultPort;
+				} else {
+					addr.port = uriSplit[1];
+				}
+				addr.host = uriSplit[0];
+			}
+			return addr.protocol + addr.host + ':' + addr.port;
+		};
 	
 		// Setting up default test environment configuration 
 		var defaultSettings = {
@@ -11,14 +33,15 @@ module.exports = {
 			'browserstack.key' : browserStackAccessKey,
 			'browserstack.local' : (localTestUrl===undefined? false : localTestUrl),
 			'browserstack.debug' : (testDebug===undefined? true : testDebug),
+			'webdriveruri' : _getHostAddress(webdriverUri, 'localhost', 8001),
 			'serverurl' : 'http://hub.browserstack.com/wd/hub',
-			'name': 'Test name',
-			'project': 'Project name',
+			'name': 'Test uten navn satt',
+			'project': 'Yr2014 brukerhistorietester',
 			'logType' : false
 		};
 		
 		// Setting up all test profiles
-		testEnvironments['default'] = testEnvironments['phantomjs'] = {'browserName': 'phantomjs', 'serverurl': 'http://localhost:8001', 'logType' : 'browser'};
+		testEnvironments['default'] = testEnvironments['phantomjs'] = {'browserName': 'phantomjs', 'serverurl': defaultSettings.webdriveruri, 'logType' : 'browser', 'desc' : 'Phantomjs via webdriver on ' + defaultSettings.webdriveruri};
 		testEnvironments['win7-ie11'] = 
 		{ 
 			'os' : 'Windows',
@@ -107,7 +130,6 @@ module.exports = {
 		testEnvironments['mac-opera'] = 
 		{ 
 			'os' : 'OS X',
-			'os_version' : 'Mavericks',
 			'browser' : 'opera'
 		};		
 		testEnvironments['maclion-safari'] = 
@@ -142,9 +164,11 @@ module.exports = {
 		{ 
 			'device' : 'iPhone 6'
 		};
-		testEnvironments['iphone5'] = 
+		testEnvironments['iphone'] = 
 		{ 
-			'device' : 'iPhone 5'
+			'device' : 'iPhone 5C',
+			'os' : 'ios',
+			'browser': 'iphone'
 		};
 		testEnvironments['iphone5s'] = 
 		{ 
@@ -152,15 +176,14 @@ module.exports = {
 		};
 		testEnvironments['ipad'] = 
 		{ 
-			'device' : 'iPad 4th Gen'
+			'device' : 'iPad mini Retina',
+			'os' : 'ios',
+			'browser' : 'iPad',
+			'deviceOrientation' : 'portrait'
 		};
 		testEnvironments['ipad-air'] = 
 		{ 
 			'device' : 'iPad Air'
-		};
-		testEnvironments['ipad-mini2'] = 
-		{ 
-			'device' : 'iPad Mini 2'
 		};
 		testEnvironments['ipad-mini'] = 
 		{ 
@@ -190,13 +213,9 @@ module.exports = {
 		{ 
 			'device' : 'Samsung Galaxy S5'
 		};
-		testEnvironments['android-nexus7'] = 
+		testEnvironments['android-nexus'] = 
 		{ 
-			'device' : 'Google Nexus 7'
-		};
-		testEnvironments['android-nexus5'] = 
-		{ 
-			'device' : 'Google Nexus 5'
+			'device' : 'Google Nexus 9'
 		};
 		testEnvironments['android-htc'] = 
 		{ 

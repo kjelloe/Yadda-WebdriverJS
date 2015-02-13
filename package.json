@@ -10,7 +10,7 @@
     "glob": "~3.2.x",
     "mkdirp": "^0.5.0",
     "mocha": "~1.12.0",
-    "selenium-webdriver": "2.35.x",
+    "selenium-webdriver": "2.44.x",
     "xunit-file": "0.0.4",
     "yadda": "^0.11.2"
   },

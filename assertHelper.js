@@ -5,7 +5,7 @@ var assert = require('selenium-webdriver/testing/assert');
 module.exports = {
 	init: function (providedDriver) {
 		var helper = {};
-		helper.findElementTimeoutMs = 3000;
+		helper.findElementTimeoutMs = 6000;
 		helper.driver = providedDriver;		
 		
 		helper.elementContainsText = function(selectorExpr, textToFind) {
@@ -16,6 +16,26 @@ module.exports = {
 				});
 				return true;
 			}, helper.findElementTimeoutMs);
+		};
+		
+		helper.elementWaitVisible = function(selectorExpr) {
+			var loadDone = webdriver.promise.defer();
+			helper.driver.wait(function() {
+				var elem = helper.driver.findElement({ css: selectorExpr });
+				loadDone.fulfill(elem.isDisplayed());
+				return true;
+			}, helper.findElementTimeoutMs);
+			return loadDone.promise;
+		};
+		
+		// Calls the provided function and returns the answer as a promise
+		helper.elementExpressionWait = function(exprToCall, arg1, arg2, arg3) {
+			var exprDone = webdriver.promise.defer();
+			helper.driver.wait(function() {
+				exprDone.fulfill(exprToCall.apply(helper, arg1, arg2, arg3));
+				return true;
+			}, helper.findElementTimeoutMs);
+			return exprDone.promise;
 		};
 		
 		helper.findElement = function(selectorExpr) {

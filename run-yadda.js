@@ -1,6 +1,6 @@
 var Yadda = require('yadda');
 var fs = require('fs');
-var webdriver = require('selenium-webdriver'); // Needs: phantomjs --webdriver=8001
+var webdriver = require('selenium-webdriver'); // Needs: phantomjs --webdriver=<somewebdriverport default 8001>
 process.env.SELENIUM_BROWSER = 'no browser specified yet'; // WORKAROUND: For selenium webdriverjs 2.44 to avoid failing on missing browser specification when running remote
 
 var selectedLanguage = Yadda.localisation.Norwegian; // TODO: Config based language setting
@@ -18,7 +18,7 @@ console.log('Using testurl "'+testurl+'"');
 
 // Finding which test environment to use and configure all available profiles
 var isLocalTestUrl = (testurl.toLowerCase().indexOf('http://localhost')==0? true : false);
-var testConfig = require('./config').init(process.env.BROWSERSTACK_USER, process.env.BROWSERSTACK_KEY, isLocalTestUrl);
+var testConfig = require('./config').init(process.env.BROWSERSTACK_USER, process.env.BROWSERSTACK_KEY, process.env.WEBDRIVERURI, isLocalTestUrl);
 var testEnv = (process.env.testenv? process.env.testenv : 'default');
 console.log('Using test environment: "' + testEnv + '"');
 var capabilities = testConfig.getTestProfile(testEnv);
@@ -40,22 +40,33 @@ if(listFeatures.list().length==0) // Force test failure if no tests found
 else
 	console.log('Found '+listFeatures.list().length+' feature file(s) using test group/folder: "' + testGroup + '"');
 
+// A running count of test instances created, use for unique identification or ports
+var testInstanceCounter = 0; 
+
 // Run each feature file found using mocha
 listFeatures.each(function(file) {
 	var stepFile = file.replace('.feature', '-steps.js');
 
     featureFile(file, function(feature) {
 	
-		var mockDataModule = new Object(); // Default to empty mock data		
+		var mockDataModule = new Object(); // Default to empty mock data				
 		var assertHelper;
 		// TODO: Run in parallell webdriver session (up to NN account restrictions) and give each session feature as name
 		capabilities.name = 'Testgroup "'+ testGroup + '"'; 
 		
+		if(feature.annotations.runonlyfortestprofile) { // If any annotation specifying to exclusively run test for a specific profile, abort for all other profiles 			
+			if(feature.annotations.runonlyfortestprofile!=testEnv) {
+				console.log('  [WARNING] Skipping feature "' + feature.title +'" for test profile "' + testEnv + '" since "runonlyfortestprofile='+feature.annotations.runonlyfortestprofile+'" annotation is specified in feature file.');
+				return; 
+			}
+		}
+		
 		before(function(done) {
 			console.log('  [File: "' + file + '"]');	
+			testInstanceCounter++; // Count pr feature
 			
 			if(feature.annotations.custommockmodule) {
-				mockDataModule = loadCustomMockDataModule(feature.annotations.custommockmodule);
+				mockDataModule = loadCustomMockDataModule(testInstanceCounter, feature.annotations.custommockmodule);
 				if(mockDataModule.before) mockDataModule.before();
 			}
 			
@@ -158,7 +169,7 @@ function formatLogOutput(logs) {
 	}
 }
 
-function loadCustomMockDataModule(customMockModule) {
+function loadCustomMockDataModule(instanceCounter, customMockModule) {
 	var mockDataPath = process_mockspath + customMockModule;
 	console.log('  [@customMockModule -> Invoking custom mock data setup from file: "'+ mockDataPath + '"]');				
 	var mockDataModule = require(mockDataPath);	
@@ -167,6 +178,6 @@ function loadCustomMockDataModule(customMockModule) {
 	for(var prop in mockDataModule) { mockDataHooks += ',' + prop; }	
 	
 	console.log('  [@customMockModule -> Methods/hooks provided by module: "' + (mockDataHooks.length>0? mockDataHooks.substring(1) : 'NONE!') + '"]');
-	if(mockDataModule.init) mockDataModule.init();
+	if(mockDataModule.init) mockDataModule.init(instanceCounter);
 	return mockDataModule;
 }
