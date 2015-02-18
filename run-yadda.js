@@ -75,34 +75,42 @@ listFeatures.each(function(file) {
 				.setLoggingPrefs( {'driver': 'ALL', 'server': 'ALL', 'browser': 'ALL'} )
 				.withCapabilities(capabilities)
 				.build();
-						
+			
 			// Not implemented at browserstack yet; driver.manage().timeouts().pageLoadTimeout(process_loadTimeout);  // Set timeouts
 			// Not implemented at browserstack yet; driver.manage().timeouts().setScriptTimeout(process_loadTimeout);
 			driver.manage().timeouts().implicitlyWait(process_timeout);
-			
 			assertHelper = require('./assertHelper').init(driver); // Set up assert helper for easier webdriverjs assertions						
-			require("./"+stepFile).steps.using(library, { driver: driver, assert : assertHelper, testUrl: testurl, custommockmodule: mockDataModule });						
-			
-			done();			
+			require("./"+stepFile).steps.using(library, { driver: driver, assert : assertHelper, helper: assertHelper, testUrl: testurl, custommockmodule: mockDataModule });						
+
+			// Checking for any custom cookies to load for test
+			loadCustomCookie(feature.annotations.customcookie).then( function() {
+				done();
+			});
         });
 
 		beforeEach(function() {
 			if(mockDataModule.beforeEach) mockDataModule.beforeEach();
 		});
 		
-        scenarios(feature.scenarios, function(scenario) {			
-            steps(scenario.steps, function(step, done) {				
-                executeInFlow(function() {					
-					new Yadda.Yadda(library, { driver: driver }).yadda(step);
+        scenarios(feature.scenarios, function(scenario) {
+            steps(scenario.steps, function(step, done) {
+                executeInFlow(function() {
+					try {
+						new Yadda.Yadda(library, { driver: driver }).yadda(step);
+					} catch(testError) {
+						console.log(testError)
+						throw new Error(testError);
+					}
                 }, done);
             });
         });
 	
         afterEach(function() {
-			if(mockDataModule.afterEach) mockDataModule.afterEach();            
-			takeTestScreenshotAsync(driver, this.currentTest)
-			.then( function(screenShotDone) { 
-			
+			if(mockDataModule.afterEach) mockDataModule.afterEach();
+			var localTest = this.currentTest;
+			// Async screenshot to ensure a proper flow
+			webdriver.promise.controlFlow().execute( function() {
+				takeTestScreenshotAsync(driver, localTest);
 			});
         });
 
@@ -112,7 +120,7 @@ listFeatures.each(function(file) {
 			getLogOutputIfAny(driver, capabilities.logType);
 			
 			// Async quit when all other tasks are done
-			executeInFlow(function() {					
+			executeInFlow(function() {
 				driver.quit();
 			}, done);
 			
@@ -180,4 +188,39 @@ function loadCustomMockDataModule(instanceCounter, customMockModule) {
 	console.log('  [@customMockModule -> Methods/hooks provided by module: "' + (mockDataHooks.length>0? mockDataHooks.substring(1) : 'NONE!') + '"]');
 	if(mockDataModule.init) mockDataModule.init(instanceCounter);
 	return mockDataModule;
+}
+
+function loadCustomCookie(customCookieData) {
+	var cookieDone = webdriver.promise.defer();
+	// If no cookie data, abort further processing
+	if(customCookieData===undefined) {
+		cookieDone.fulfill();
+		return cookieDone.promise;
+	}
+	// Parsing raw cookie data from text
+	var rawData = customCookieData.split(';',2)
+	if(rawData.length<2)  { throw new Error("ERROR: @customcookie needs to contain '<cookiename>';<cookievalue>'"); }
+	// Adding cookie with default path and using testurl host part as domain
+	driver.manage().addCookie(rawData[0], rawData[1], '/', parseUrl(testurl).host);
+	// List all loaded cookies
+	driver.manage().getCookies().then( function(cookieList) {
+		var cookieNameList = '';
+		for(var i=0;i<cookieList.length;i++) { 	cookieNameList += ',' + cookieList[i].name; }
+		console.log('  [@customcookie -> Loaded cookies: "'+ (cookieNameList.length>0? cookieNameList.substring(1) : 'NONE!') + '"]');
+		cookieDone.fulfill();
+	});
+	return cookieDone.promise;
+}
+
+function parseUrl(href) {
+    var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)(\/[^?#]*)(\?[^#]*|)(#.*|)$/);
+    return match && {
+        protocol: match[1],
+        host: match[2],
+        hostname: match[3],
+        port: match[4],
+        pathname: match[5],
+        search: match[6],
+        hash: match[7]
+    }
 }

@@ -14,5 +14,8 @@
     "xunit-file": "0.0.4",
     "yadda": "^0.11.2"
   },
-  "engine": "node >= 0.8.0"
+  "engine": "node >= 0.8.0",
+  "dependencies": {
+    "should": "^5.0.0"
+  }
 }
