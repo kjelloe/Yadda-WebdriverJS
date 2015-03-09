@@ -41,7 +41,7 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
   
 7. FURTHER SAMPLE FEATURE TESTS 
 
- Demo features is found in:
+ Demo features tests are found in:
 
   features\demo\YR-stedsøk.feature 
  
