@@ -8,8 +8,8 @@ exit /b 1
 
 :run
 REM NB! Use your own browserstack key and user in environment variables for node mocha to read
-set BROWSERSTACK_USER=christofferedmun1
-set BROWSERSTACK_KEY=UoCQL8FhAHtuvMNJ4A5s
+set BROWSERSTACK_USER=
+set BROWSERSTACK_KEY=
 set WEBDRIVERURI=http://localhost:8002
 set testenv=%1
 set testurl=%2
