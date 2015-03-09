@@ -5,11 +5,14 @@ exports.steps = {
 	using: function(library, ctx) {
 		library.når("jeg starter yr2014 med $STED i søkefeltet", function(sted) {
 			ctx.driver.get(ctx.testUrl + 'nb')
-			.then(function() {
-				ctx.driver.findElement(webdriver.By.id('freetextSearchInput')).sendKeys(sted);
-				ctx.assert.elementWaitVisible('#suggestionPanel ol').then( function() {
-					ctx.driver.findElement(webdriver.By.css('ol.list a[href*="'+sted+'"]')).click();
-				});				
+			.then( function() {
+				// WORKAROUND: for versioned javascript failing to load
+				ctx.driver.navigate().refresh().then(function() {
+					ctx.driver.findElement(webdriver.By.id('freetextSearchInput')).sendKeys(sted);
+					ctx.assert.elementWaitVisible('#suggestionPanel ol').then( function() {
+						ctx.driver.findElement(webdriver.By.css('ol.list a[href*="'+sted+'"]')).click();
+					});
+				});
 			});
 		});
 
