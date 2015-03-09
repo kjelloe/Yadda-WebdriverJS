@@ -18,7 +18,7 @@ console.log('Using testurl "'+testurl+'"');
 
 // Finding which test environment to use and configure all available profiles
 var isLocalTestUrl = (testurl.toLowerCase().indexOf('http://localhost')==0? true : false);
-var testConfig = require('./config').init(process.env.BROWSERSTACK_USER, process.env.BROWSERSTACK_KEY, process.env.WEBDRIVERURI, isLocalTestUrl);
+var testConfig = require('./config').init(process.env.BROWSERSTACK_USER, process.env.BROWSERSTACK_KEY, process.env.WEBDRIVERURI, isLocalTestUrl, process.env.DEBUGMODE);
 var testEnv = (process.env.testenv? process.env.testenv : 'default');
 console.log('Using test environment: "' + testEnv + '"');
 var capabilities = testConfig.getTestProfile(testEnv);

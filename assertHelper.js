@@ -13,7 +13,7 @@ module.exports = {
 			helper.driver.wait(function() {
 				helper.driver.findElement({ css: selectorExpr })
 				.getText().then(function(text) {
-					assert(text).contains(textToFind);	
+					assert(text).contains(textToFind, 'Element "' + selectorExpr + '" contains "' + text + '"');
 				});
 				return true;
 			}, helper.findElementTimeoutMs);
@@ -42,6 +42,16 @@ module.exports = {
 		helper.findElement = function(selectorExpr) {
 			return helper.driver.findElement(webdriver.By.css(selectorExpr));
 		};
+		
+		helper.findElementWait = function(selectorExpr) {
+			var loadDone = webdriver.promise.defer();
+			helper.driver.wait(function() {
+				var elem = helper.driver.findElement({ css: selectorExpr });
+				loadDone.fulfill(elem);
+				return true;
+			}, helper.findElementTimeoutMs);
+			return loadDone.promise;
+		};
 
 		helper.existsElement = function(selectorExpr, assertionMessage) {
 			var done = webdriver.promise.defer();
@@ -59,6 +69,7 @@ module.exports = {
 			return done;
 		};
 
+		
 		helper.existsElements = function(selectorExpr, numElementsRequired, assertionMessage) {
 			var done = webdriver.promise.defer();
 			helper.driver.findElements(webdriver.By.css(selectorExpr)).then(function (list) {
@@ -75,11 +86,19 @@ module.exports = {
 			return done;
 		};
 		
+		helper.existsLessElementsThan = function(selectorExpr, lessThanCount, assertionMessage) {
+			var done = webdriver.promise.defer();
+			helper.driver.findElements(webdriver.By.css(selectorExpr)).then(function (list) {
+				list.length.should.be.lessThan(lessThanCount, (assertionMessage===undefined? 'List of elements not found using CSS selector: "'+selectorExpr+'"' : assertionMessage));
+			});
+			return done;
+		};
+		
 		helper.visibleElement = function(selectorExpr, assertionMessage) {
 			var result = helper.driver.findElement(webdriver.By.css(selectorExpr)).isDisplayed();
 			assert(result).isTrue(true, (assertionMessage===undefined? 'Element not found using CSS selector: "'+selectorExpr+'"' : assertionMessage));
 		};
-		
+						
 		helper.textLengthGreaterThan = function(selectorExpr, lengthGreaterThan, assertionMessage) {
 			helper.findElement(selectorExpr).getText().then( function(text) {
 				text.length.should.be.greaterThan(lengthGreaterThan, (assertionMessage===undefined? 'Element not found using CSS selector: "'+selectorExpr+'"' : assertionMessage));

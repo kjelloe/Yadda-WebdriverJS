@@ -1,6 +1,7 @@
 // Creating configurations available for crossbrowser testing
 var testEnvironments = new Array(); 
 
+// NRK required browser support, category 1: http://www.nrk.no/retningslinjer/nettleserstotte-i-nrk-1.7775258
 module.exports = {
 
 	init: function (browserStackUser, browserStackAccessKey, webdriverUri, localTestUrl, testDebug) {
@@ -158,11 +159,15 @@ module.exports = {
 		};
 		testEnvironments['iphone6plus'] = 
 		{ 
-			'device' : 'iPhone 6 Plus'
+			'device' : 'iPhone 6 Plus',
+			'os' : 'ios',
+			'browser': 'iphone'
 		};
 		testEnvironments['iphone6'] = 
 		{ 
-			'device' : 'iPhone 6'
+			'device' : 'iPhone 6',
+			'os' : 'ios',
+			'browser': 'iphone'
 		};
 		testEnvironments['iphone'] = 
 		{ 
@@ -172,7 +177,9 @@ module.exports = {
 		};
 		testEnvironments['iphone5s'] = 
 		{ 
-			'device' : 'iPhone 5S'
+			'device' : 'iPhone 5S',
+			'os' : 'ios',
+			'browser': 'iphone'
 		};
 		testEnvironments['ipad'] = 
 		{ 
@@ -183,11 +190,17 @@ module.exports = {
 		};
 		testEnvironments['ipad-air'] = 
 		{ 
-			'device' : 'iPad Air'
+			'device' : 'iPad Air',
+			'os' : 'ios',
+			'browser' : 'iPad',
+			'deviceOrientation' : 'landscape'
 		};
 		testEnvironments['ipad-mini'] = 
 		{ 
-			'device' : 'iPad mini Retina'
+			'device' : 'iPad mini Retina',
+			'os' : 'ios',
+			'browser' : 'iPad',
+			'deviceOrientation' : 'portrait'
 		};
 		testEnvironments['android'] = 
 		{ 
@@ -219,7 +232,9 @@ module.exports = {
 		};
 		testEnvironments['android-htc'] = 
 		{ 
-			'device' : 'Google One M8'
+			'device' : 'HTC One M8',
+			'os' : 'android',
+			'browser' : 'android'			
 		};
 		testEnvironments['android-sony-xperia'] = 
 		{ 

@@ -10,10 +10,17 @@ set -e # Exit on error
 ROOTDIR="$( cd "$( dirname "$0")" && pwd )"
 cd $ROOTDIR
 
+if [ ! -f $ROOTDIR/node_modules/.bin/mocha  ]; then
+    echo "ERROR; MISSING FILES: Please run 'npm install' to install test framework and dependencies"
+	exit 1
+fi
+
+phantomJsExe='phantomjs.exe' # Phantomjs default in path
+
 export BROWSERSTACK_USER='' # NOTE: enter your own
 export BROWSERSTACK_KEY='' # NOTE: enter your own
 
-export timeout=10000 # Timeout for webdriver
+export timeout=12000 # Timeout for webdriver
 export testenv=$1
 export testurl=$2
 export testgroup=$3
@@ -21,7 +28,7 @@ export testgroup=$3
 # If applicable PhantomJS version
 if [ "$1" == "phantomjs" ]
 then
-	phantomJsVersion=$(phantomjs --version)
+	phantomJsVersion=$($phantomJsExe --version)
 	echo "PhantomJS version $phantomJsVersion"
 
 	# Finding any old running Phantomjs
@@ -34,12 +41,12 @@ then
 	  kill $oldpid
 	fi
 
-	phantomjs --webdriver=8001 --webdriver-loglevel=SEVERE 2>&1
+	$phantomJsExe --webdriver=8001 --webdriver-loglevel=SEVERE 2>&1 # TODO: Ghostdriver needs to be loaded with an absolute path; --webdriver-ghostdriverpath=c:\git\devops\utils\phantomjs\lib\ghostdriver
 	pid1=$!
 	echo "PhantomJS is now running using PID: $pid1"
 fi
 
-mocha --reporter spec --timeout 60000 run-yadda.js
+./node_modules/.bin/mocha --reporter spec --timeout 180000 run-yadda.js
 
 # If phantomjs might be running
 if [ "$1" == "phantomjs" ]
