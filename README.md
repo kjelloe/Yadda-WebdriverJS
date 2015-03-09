@@ -15,7 +15,31 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
 
  npm install
 
-3. SAMPLE FEATURE/TESTS 
+3. CONFIGURE TEST PROFILES/CONFIGURATION
+
+  If applicable, edit config.js and add or remove configuration profiles. By default 1 phantomjs and 29 browserstack profiles are included. SauceLabs configuration may be added.
+
+4. HOW TO RUN YADDA-BDD REMOTELY ON BROWSERSTACK or SAUCELABS 
+
+ Edit runtests.bat or runtests.sh and set your Browserstack username and access key [Sign up for free trial here: https://www.browserstack.com/users/sign_up go to https://www.browserstack.com/automate to find "Username" and "Access Keys"]
+ 
+ Usage: runtests.bat someprofile baseUrlToTest optionalTestGroupFolder
+ 
+5. HOW TO RUN YADDA-BDD LOCALLY USING PhantomJS
+
+ Start phantomJs as a local process: phantomjs --webdriver=8001 
+ 
+ Usage: runtests.bat phantomjs baseUrlToTest optionalTestGroupFolder           
+  
+6. RUNNING DEMO ON SEVERAL DEVICES
+
+ runtests.bat phantomjs http://yr.cloudapp.net demo
+ 
+ runtests.bat android http://yr.cloudapp.net demo
+ 
+ runtests.bat iphone http://yr.cloudapp.net demo
+  
+7. FURTHER SAMPLE FEATURE TESTS 
 
  Demo features is found in:
 
@@ -34,27 +58,3 @@ This allow for both headless (GhostDriver/PhantomJS) and cloud based (BrowserSta
   example-features\en\YR-search.feature
   
   example-features\en\YR-search-steps.js
-
-4. CONFIGURE TEST PROFILES/CONFIGURATION
-
- Edit config.js and add or remove configuration profiles. By default 1 phantomjs and 29 browserstack profiles are included. SauceLabs configuration may be added.
-    
-5. RUN REMOTE YADDA-BDD (BROWSERSTACK|SAUCELABS)
-
- runtests.bat android baseUrlToTest
- 
- runtests.bat someprofile baseUrlToTest optionalTestGroupFolder
-
-6. RUN LOCAL YADDA-BDD (PHANTOMJS)
-
- phantomjs --webdriver=8001 [start as a separate process]
- 
- runtests.bat phantomjs baseUrlToTest optionalTestGroupFolder           
- 
- 7. DEMO RUN ON SEVERAL DEVICES
- runtests.bat phantomjs http://yr.cloudapp.net demo
- 
- runtests.bat android http://yr.cloudapp.net demo
- 
- runtests.bat iphone http://yr.cloudapp.net demo
- 
