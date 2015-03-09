@@ -1,7 +1,6 @@
 // Creating configurations available for crossbrowser testing
 var testEnvironments = new Array(); 
 
-// NRK required browser support, category 1: http://www.nrk.no/retningslinjer/nettleserstotte-i-nrk-1.7775258
 module.exports = {
 
 	init: function (browserStackUser, browserStackAccessKey, webdriverUri, localTestUrl, testDebug) {
@@ -37,7 +36,7 @@ module.exports = {
 			'webdriveruri' : _getHostAddress(webdriverUri, 'localhost', 8001),
 			'serverurl' : 'http://hub.browserstack.com/wd/hub',
 			'name': 'Test uten navn satt',
-			'project': 'Yr2014 brukerhistorietester',
+			'project': 'Demo brukerhistorietester',
 			'logType' : false
 		};
 		
