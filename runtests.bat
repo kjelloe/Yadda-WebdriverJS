@@ -10,7 +10,7 @@ exit /b 1
 REM NB! Use your own browserstack key and user in environment variables for node mocha to read
 set BROWSERSTACK_USER=
 set BROWSERSTACK_KEY=
-set WEBDRIVERURI=http://localhost:8002
+set WEBDRIVERURI=http://localhost:8001
 set testenv=%1
 set testurl=%2
 set testgroup=%3
