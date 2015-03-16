@@ -16,21 +16,22 @@ if(testurl==null) { throw new Error('ERROR: No test url provided for test. Requi
 if(testurl.endsWith('/')==false) { testurl += '/'; }
 console.log('Using testurl "'+testurl+'"');
 
+// Find optional process parameters
+var process_timeout = parseInt(process.env.timeout? process.env.timeout : 6000);
+var process_testprofiles = (process.env.testprofiles? process.env.testprofiles : './testprofiles/browserstack'); 
+var process_mockspath = (process.env.mockspath? process.env.mockspath : './mocks/'); 
+var process_loadTimeout = (process_timeout*5);
+
 // Finding which test environment to use and configure all available profiles
 var isLocalTestUrl = (testurl.toLowerCase().indexOf('http://localhost')==0? true : false);
-var testConfig = require('./config').init(process.env.BROWSERSTACK_USER, process.env.BROWSERSTACK_KEY, process.env.WEBDRIVERURI, isLocalTestUrl, process.env.DEBUGMODE);
+var testConfig = require('./config-setup').init(process_testprofiles, process.env.TESTSERVICE_USER, process.env.TESTSERVICE_ACCESSKEY, process.env.WEBDRIVERURI, isLocalTestUrl, process.env.DEBUGMODE);
 var testEnv = (process.env.testenv? process.env.testenv : 'default');
-console.log('Using test environment: "' + testEnv + '"');
+console.log('Using test environment: "' + testEnv + '" from testprofiles defined in "'+process_testprofiles+'"');
 var capabilities = testConfig.getTestProfile(testEnv);
 if(!capabilities) { throw new Error('Invalid "testenv" provided: ' + testEnv); }
 
 // Finding test group (folders) to use
 var testGroup = (process.env.testgroup? 'features/'+process.env.testgroup +'/' : 'features');
-
-// Find any additional process parameters
-var process_timeout = parseInt(process.env.timeout? process.env.timeout : 6000);
-var process_mockspath = (process.env.mockspath? process.env.mockspath : './mocks/'); 
-var process_loadTimeout = (process_timeout*5);
 
 // Find all feature files, with corresponding step file, then executing them using Mocha
 var listFeatures = new Yadda.FeatureFileSearch(testGroup);
@@ -53,6 +54,7 @@ listFeatures.each(function(file) {
 		var assertHelper;
 		// TODO: Run in parallell webdriver session (up to NN account restrictions) and give each session feature as name
 		capabilities.name = 'Testgroup "'+ testGroup + '"'; 
+		process.env.SELENIUM_BROWSER = capabilities.browserName; // Set environment variables based on selected config
 		
 		if(feature.annotations.runonlyfortestprofile) { // If any annotation specifying to exclusively run test for a specific profile, abort for all other profiles 			
 			if(feature.annotations.runonlyfortestprofile!=testEnv) {

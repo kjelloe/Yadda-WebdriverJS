@@ -7,10 +7,11 @@ echo USAGE: runtests browserProfileToRunIn http://sometesturl/ [optional:testgro
 exit /b 1	
 
 :run
-REM NB! Use your own browserstack key and user in environment variables for node mocha to read
-set BROWSERSTACK_USER=
-set BROWSERSTACK_KEY=
-set WEBDRIVERURI=http://localhost:8001
+REM NB! Use your own browserstack or saucelabs key and user in environment variables for node mocha to read
+set TESTSERVICE_USER=
+set TESTSERVICE_ACCESSKEY=
+set testprofiles=./testprofiles/browserstack
+set WEBDRIVERURI=http://localhost:8002
 set testenv=%1
 set testurl=%2
 set testgroup=%3

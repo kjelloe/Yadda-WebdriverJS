@@ -17,9 +17,10 @@ fi
 
 phantomJsExe='phantomjs.exe' # Phantomjs default in path
 
-export BROWSERSTACK_USER='' # NOTE: enter your own
-export BROWSERSTACK_KEY='' # NOTE: enter your own
+export TESTSERVICE_USER='' # NOTE: enter your own
+export TESTSERVICE_ACCESSKEY='' # NOTE: enter your own
 
+export testprofiles=./testprofiles/browserstack # Which webdriverjs cloud service configuration to use for tests
 export timeout=12000 # Timeout for webdriver
 export testenv=$1
 export testurl=$2
