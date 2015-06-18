@@ -20,6 +20,7 @@ console.log('Using testurl "'+testurl+'"');
 var process_timeout = parseInt(process.env.timeout? process.env.timeout : 6000);
 var process_testprofiles = (process.env.testprofiles? process.env.testprofiles : './testprofiles/browserstack'); 
 var process_mockspath = (process.env.mockspath? process.env.mockspath : './mocks/'); 
+var process_windowsize = (process.env.windowsize? process.env.windowsize : null); 
 var process_loadTimeout = (process_timeout*5);
 
 // Finding which test environment to use and configure all available profiles
@@ -81,6 +82,9 @@ listFeatures.each(function(file) {
 			// Not implemented at browserstack yet; driver.manage().timeouts().pageLoadTimeout(process_loadTimeout);  // Set timeouts
 			// Not implemented at browserstack yet; driver.manage().timeouts().setScriptTimeout(process_loadTimeout);
 			driver.manage().timeouts().implicitlyWait(process_timeout);
+			
+			if(process_windowsize!==null) { setWindowSizeIfPossible(process.env.SELENIUM_BROWSER, process_windowsize); } // Setting windows size if applicable
+			
 			assertHelper = require('./assertHelper').init(driver); // Set up assert helper for easier webdriverjs assertions						
 			require("./"+stepFile).steps.using(library, { driver: driver, assert : assertHelper, helper: assertHelper, testUrl: testurl, custommockmodule: mockDataModule });						
 
@@ -141,6 +145,8 @@ function takeTestScreenshotAsync(testDriver, test) {
 	var path = utility.getWorkingDir() + '/results/screenshots/'+ (test.state != 'passed' ? 'failed/' : 'passed/');
 	utility.createDirIfNotExists(path).then( function() {
 		var filepath = path + test.title.replace(/\W+/g, '_').toLowerCase() + '-' + testEnv + '.png';
+		filepath = filepath.replace(/\//,'\\'); // Cleaning up path separators
+		if(test.state != 'passed') { console.log('  [Screenshot: "'+filepath+'" ]'); } // Log screenshot if failure only
 		testDriver.takeScreenshot().then(function(data) {
 			fs.writeFileSync(filepath, data, 'base64');
 		}).then( function() {
@@ -212,6 +218,29 @@ function loadCustomCookie(customCookieData) {
 		cookieDone.fulfill();
 	});
 	return cookieDone.promise;
+}
+
+function setWindowSizeIfPossible(browserName, sizeString) {
+	var sizeData = sizeString.toLowerCase().split('x',2);
+	
+	if(sizeData.length<2 || isInt(sizeData[0])==false || isInt(sizeData[1])==false)
+		throw new Error('ERROR: Window size parameter provided is invalid: "'+sizeString+'". Must be on the form "1280x1024"');
+	
+	var winSizeDone = webdriver.promise.defer();
+	webdriver.promise.controlFlow().on('uncaughtException', function(winSizeErr) {
+		console.log('WARNING: Could not set windows size for browser "'+browserName+'", reason: ' + winSizeErr.message);
+		winSizeDone.fulfill();
+	});
+	
+	driver.manage().window().setSize(parseInt(sizeData[0]),parseInt(sizeData[1])).then( function() {
+		winSizeDone.fulfill();
+	});
+	
+	return winSizeDone.promise;
+}
+// Helpers functions below // TODO: Refactor into util library
+function isInt(value) {
+  return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value))
 }
 
 function parseUrl(href) {

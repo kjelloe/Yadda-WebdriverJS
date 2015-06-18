@@ -1,19 +1,33 @@
 // Setting up test assert helper
 var webdriver = require('selenium-webdriver');
 var assert = require('selenium-webdriver/testing/assert');
+var should = require('should');
 
 module.exports = {
 	init: function (providedDriver) {
 		var helper = {};
-		helper.findElementTimeoutMs = 6000;
+		helper.findElementTimeoutMs = 12000;
+		helper.waitElementTimeoutMs = 60000;
 		helper.driver = providedDriver;		
 		helper.not = {}; // Container for negating functions
 		
-		helper.elementContainsText = function(selectorExpr, textToFind) {
+		helper.elementContainsText = function(selectorExpr, textToFind, optionalParentElement) {
+			if(optionalParentElement===undefined) { optionalParentElement = helper.driver }
 			helper.driver.wait(function() {
-				helper.driver.findElement({ css: selectorExpr })
+				optionalParentElement.findElement({ css: selectorExpr })
 				.getText().then(function(text) {
 					assert(text).contains(textToFind, 'Element "' + selectorExpr + '" contains "' + text + '"');
+				});
+				return true;
+			}, helper.findElementTimeoutMs);
+		};
+		
+		helper.elementHasText = function(selectorExpr, optionalParentElement) {
+			if(optionalParentElement===undefined) { optionalParentElement = helper.driver }
+			helper.driver.wait(function() {
+				optionalParentElement.findElement({ css: selectorExpr })
+				.getText().then(function(text) {
+					text.length.should.be.greaterThan(0, 'Element "' + selectorExpr + '" contains some text');
 				});
 				return true;
 			}, helper.findElementTimeoutMs);
@@ -68,7 +82,6 @@ module.exports = {
 			});
 			return done;
 		};
-
 		
 		helper.existsElements = function(selectorExpr, numElementsRequired, assertionMessage) {
 			var done = webdriver.promise.defer();
@@ -77,7 +90,25 @@ module.exports = {
 			});
 			return done;
 		};
-
+		
+		helper.waitForElementsInContainer = function(containerExpr, elementsExpression, assertFunction) {
+			helper.findElementWait(containerExpr).then(function (suggestionPanel) {
+				helper.driver.wait(function() {
+					var elemIsPresent = helper.driver.isElementPresent(webdriver.By.css(elementsExpression))
+					.then( function() {
+						if(assertFunction!==undefined) {
+							helper.driver.findElements(webdriver.By.css(elementsExpression)).then( assertFunction );
+						} else {
+							helper.driver.findElements(webdriver.By.css(elementsExpression)).then( function(elementList) {
+								elementList.length.should.be.greaterThan(0);
+							});
+						}
+					});
+					return true;
+				}, helper.waitElementTimeoutMs);
+			});
+		};
+		
 		helper.existsMoreElementsThan = function(selectorExpr, moreThanCount, assertionMessage) {
 			var done = webdriver.promise.defer();
 			helper.driver.findElements(webdriver.By.css(selectorExpr)).then(function (list) {
@@ -90,6 +121,14 @@ module.exports = {
 			var done = webdriver.promise.defer();
 			helper.driver.findElements(webdriver.By.css(selectorExpr)).then(function (list) {
 				list.length.should.be.lessThan(lessThanCount, (assertionMessage===undefined? 'List of elements not found using CSS selector: "'+selectorExpr+'"' : assertionMessage));
+			});
+			return done;
+		};
+		
+		helper.existsExactElements = function(selectorExpr, count, assertionMessage) {
+			var done = webdriver.promise.defer();
+			helper.driver.findElements(webdriver.By.css(selectorExpr)).then(function (list) {
+				list.length.should.equal(count, (assertionMessage===undefined? 'List of elements not found using CSS selector: "'+selectorExpr+'"' : assertionMessage));
 			});
 			return done;
 		};
@@ -110,7 +149,7 @@ module.exports = {
 			helper.driver.get(url).then( function(page) {
 				// NOTE: Phantomjs delivers 'html body' even on a page that does not exist; "no connection page"
 				helper.driver.findElement(webdriver.By.tagName('body')).getTagName().then(function(tagname) {
-					assert(tagname).equalTo('body', 'HTML page could not be loaded from url: "' + url + '"'); 
+					assert(tagname.toLowerCase()).equalTo('body', 'HTML page could not be loaded from url: "' + url + '"'); 
 					loadDone.fulfill(true);
 				});
 			});

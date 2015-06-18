@@ -180,7 +180,7 @@ module.exports = {
 	{ 
 		 'browserName' : 'android',
 		 'platform' : 'ANDROID',
-		 'device' : 'Google Nexus 6'
+		 'device' : 'Google Nexus 5'
 	},
 	'android-galaxy-tab' :
 	{ 
