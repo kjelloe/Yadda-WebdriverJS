@@ -10,7 +10,7 @@ Yadda.plugins.mocha.StepLevelPlugin.init({language: selectedLanguage});
 var featureParser = new Yadda.parsers.FeatureFileParser(selectedLanguage);
 var Dictionary = Yadda.Dictionary;
 var EventBus = require('yadda').EventBus;
-	
+  
 // Fetching and setting up configuration parameters
 var scenarioFile = helper.getScenariosFile();
 var overwriteStubFile = helper.getArgument("overwrite");
@@ -28,27 +28,27 @@ console.log('BDD step stub output file:  ' + webdriverStepsOutputFile);
 console.log('\n--------------- GENERATING steps for features with scenarios ---------------');
 
 try {
-	// Loading and running text spec files parsed by yadda and run by Yadda
-	featureParser.parse(scenarioFile, function(feature) {
-		console.log('Feature  : ' + feature.title);
-		var webdriverjsStepsOutput = helper.makeFeatureHeading(feature);	
+  // Loading and running text spec files parsed by yadda and run by Yadda
+  featureParser.parse(scenarioFile, function(feature) {
+    console.log('Feature  : ' + feature.title);
+    var webdriverjsStepsOutput = helper.makeFeatureHeading(feature);	
 
-		scenarios(feature.scenarios, function(scenario) {
+    scenarios(feature.scenarios, function(scenario) {
 
-			console.log('Scenario : ' + scenario.title);
-			webdriverjsStepsOutput += helper.makeScenarioSteps(scenario.steps);		  
+      console.log('Scenario : ' + scenario.title);
+      webdriverjsStepsOutput += helper.makeScenarioSteps(scenario.steps);		  
 
-		});
-				
-		// Read template file and append step stubs
-		var templateText = fs.readFileSync(webdriverStepsTemplateFile, "utf8");
-		webdriverjsStepsOutput = templateText.replace("/* TEMPLATE: Steps-will-be-placed-here */", webdriverjsStepsOutput);
-		fs.writeFileSync(webdriverStepsOutputFile, webdriverjsStepsOutput, "utf-8");
-		// Make summary
-		console.log('\n--------------- DONE--------------------------------------------------------');
-		console.log('Yadda-WebdriverJs step stub file generated:\n\tfile:\n' + webdriverStepsOutputFile);
-	});
+    });
+        
+    // Read template file and append step stubs
+    var templateText = fs.readFileSync(webdriverStepsTemplateFile, "utf8");
+    webdriverjsStepsOutput = templateText.replace("/* TEMPLATE: Steps-will-be-placed-here */", webdriverjsStepsOutput);
+    fs.writeFileSync(webdriverStepsOutputFile, webdriverjsStepsOutput, "utf-8");
+    // Make summary
+    console.log('\n--------------- DONE--------------------------------------------------------');
+    console.log('Yadda-WebdriverJs step stub file generated:\n\tfile:\n' + webdriverStepsOutputFile);
+  });
 }
 catch(genError) {
-	console.log('\nERROR WHILE GENERATING:\n Could not generate Yadda-WebdriverJs step stub file due to: ' + genError.message);
+  console.log('\nERROR WHILE GENERATING:\n Could not generate Yadda-WebdriverJs step stub file due to: ' + genError.message);
 }
