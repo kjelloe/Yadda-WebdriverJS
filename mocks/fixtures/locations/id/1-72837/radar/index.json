@@ -1,0 +1,21 @@
+{
+  "times": [
+    "2015-02-06T12:30:00Z",
+    "2015-02-06T12:15:00Z",
+    "2015-02-06T12:00:00Z",
+    "2015-02-06T11:45:00Z"
+  ],
+  "urls": [
+    "http://yrapi.cloudapp.net/api/v0/radar/image?imageVersion=m&t=2015.02.06T12:30:00Z&x=4&y=-332",
+    "http://yrapi.cloudapp.net/api/v0/radar/image?imageVersion=m&t=2015.02.06T12:15:00Z&x=4&y=-332",
+    "http://yrapi.cloudapp.net/api/v0/radar/image?imageVersion=m&t=2015.02.06T12:00:00Z&x=4&y=-332",
+    "http://yrapi.cloudapp.net/api/v0/radar/image?imageVersion=m&t=2015.02.06T11:45:00Z&x=4&y=-332"
+  ],
+  "x": 4,
+  "y": -332,
+  "_links": {
+    "self": {
+      "href": "/locations/id/radar"
+    }
+  }
+}

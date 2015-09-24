@@ -1,0 +1,234 @@
+{
+  "totalResults": 5,
+  "_links": {
+    "self": {
+      "href": null
+    },
+    "page": {
+      "href": "/locations{?page}",
+      "templated": true
+    },
+    "search": {
+      "href": "/locations/search{?q}",
+      "templated": true
+    },
+    "location": [
+      {
+        "href": "/locations/id/1-72837"
+      },
+      {
+        "href": "/locations/id/1-2760700"
+      },
+      {
+        "href": "/locations/id/1-86450"
+      },
+      {
+        "href": "/locations/id/2-796037"
+      },
+      {
+        "href": "/locations/id/1-502296"
+      }
+    ]
+  },
+  "_embedded": {
+    "location": [
+      {
+        "category": {
+          "id": "CB09",
+          "name": "City – large town"
+        },
+        "id": "1-72837",
+        "name": "Oslo",
+        "position": {
+          "lat": 59.91273,
+          "lon": 10.74609
+        },
+        "elevation": 10,
+        "timeZone": "Europe/Oslo",
+        "urlPath": "Norway/Oslo/Oslo/Oslo",
+        "country": {
+          "id": "NO",
+          "name": "Norway"
+        },
+        "region": {
+          "id": "NO/03",
+          "name": "Oslo"
+        },
+        "subregion": {
+          "id": "NO/03/0301",
+          "name": "Oslo"
+        },
+        "_links": {
+          "self": {
+            "href": "/locations/id/1-72837"
+          },
+          "forecast": {
+            "href": "/locations/id/1-72837/forecast"
+          },
+          "radar": {
+            "href": "/locations/id/1-72837/radar"
+          },
+          "celestialevent": {
+            "href": "/locations/id/1-72837/celestialevent"
+          }
+        }
+      },
+      {
+        "category": {
+          "id": "AC01",
+          "name": "Municipality"
+        },
+        "id": "1-2760700",
+        "name": "Oslo kommune",
+        "position": {
+          "lat": 59.91193,
+          "lon": 10.73361
+        },
+        "elevation": 4,
+        "timeZone": "Europe/Oslo",
+        "urlPath": "Norway/Oslo/Oslo",
+        "country": {
+          "id": "NO",
+          "name": "Norway"
+        },
+        "region": {
+          "id": "NO/03",
+          "name": "Oslo"
+        },
+        "subregion": {
+          "id": "NO/03/0301",
+          "name": "Oslo"
+        },
+        "_links": {
+          "self": {
+            "href": "/locations/id/1-2760700"
+          },
+          "forecast": {
+            "href": "/locations/id/1-2760700/forecast"
+          },
+          "radar": {
+            "href": "/locations/id/1-2760700/radar"
+          },
+          "celestialevent": {
+            "href": "/locations/id/1-2760700/celestialevent"
+          }
+        }
+      },
+      {
+        "category": {
+          "id": "KG02",
+          "name": "Airport"
+        },
+        "id": "1-86450",
+        "name": "Oslo lufthavn",
+        "position": {
+          "lat": 60.194,
+          "lon": 11.09936
+        },
+        "elevation": 200,
+        "timeZone": "Europe/Oslo",
+        "urlPath": "Norway/Akershus/Ullensaker/Oslo lufthavn",
+        "country": {
+          "id": "NO",
+          "name": "Norway"
+        },
+        "region": {
+          "id": "NO/02",
+          "name": "Akershus"
+        },
+        "subregion": {
+          "id": "NO/02/0235",
+          "name": "Ullensaker"
+        },
+        "_links": {
+          "self": {
+            "href": "/locations/id/1-86450"
+          },
+          "forecast": {
+            "href": "/locations/id/1-86450/forecast"
+          },
+          "radar": {
+            "href": "/locations/id/1-86450/radar"
+          },
+          "celestialevent": {
+            "href": "/locations/id/1-86450/celestialevent"
+          }
+        }
+      },
+      {
+        "category": {
+          "id": "CB11",
+          "name": "Regional capital"
+        },
+        "id": "2-796037",
+        "name": "Oslomej",
+        "position": {
+          "lat": 41.57722,
+          "lon": 21.0
+        },
+        "elevation": 996,
+        "timeZone": "Europe/Skopje",
+        "urlPath": "Macedonia/Oslomej/Oslomej",
+        "country": {
+          "id": "MK",
+          "name": "Macedonia"
+        },
+        "region": {
+          "id": "MK/77",
+          "name": "Oslomej"
+        },
+        "_links": {
+          "self": {
+            "href": "/locations/id/2-796037"
+          },
+          "forecast": {
+            "href": "/locations/id/2-796037/forecast"
+          },
+          "radar": {
+            "href": "/locations/id/2-796037/radar"
+          },
+          "celestialevent": {
+            "href": "/locations/id/2-796037/celestialevent"
+          }
+        }
+      },
+      {
+        "category": {
+          "id": "AB01",
+          "name": "County"
+        },
+        "id": "1-502296",
+        "name": "Oslo fylke",
+        "position": {
+          "lat": 59.91193,
+          "lon": 10.73361
+        },
+        "elevation": 4,
+        "timeZone": "Europe/Oslo",
+        "urlPath": "Norway/Oslo",
+        "country": {
+          "id": "NO",
+          "name": "Norway"
+        },
+        "region": {
+          "id": "NO/03",
+          "name": "Oslo"
+        },
+        "_links": {
+          "self": {
+            "href": "/locations/id/1-502296"
+          },
+          "forecast": {
+            "href": "/locations/id/1-502296/forecast"
+          },
+          "radar": {
+            "href": "/locations/id/1-502296/radar"
+          },
+          "celestialevent": {
+            "href": "/locations/id/1-502296/celestialevent"
+          }
+        }
+      }
+    ]
+  }
+}

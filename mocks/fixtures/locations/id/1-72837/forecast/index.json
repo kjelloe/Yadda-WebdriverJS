@@ -1,0 +1,3320 @@
+{
+  "created": "2015-09-08T11:50:37+02:00",
+  "update": "2015-09-08T18:00:00+02:00",
+  "shortIntervals": [
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 255
+      },
+      "wind": {
+        "direction": 345,
+        "gust": 5,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 5,
+        "high": 0,
+        "middle": 0,
+        "low": 5,
+        "fog": 0
+      },
+      "start": "2015-09-08T14:00:00+02:00",
+      "end": "2015-09-08T15:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 21,
+        "gust": 6,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 4,
+        "high": 0,
+        "middle": 0,
+        "low": 3,
+        "fog": 0
+      },
+      "start": "2015-09-08T15:00:00+02:00",
+      "end": "2015-09-08T16:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 27,
+        "gust": 6,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 10,
+        "high": 0,
+        "middle": 0,
+        "low": 10,
+        "fog": 0
+      },
+      "start": "2015-09-08T16:00:00+02:00",
+      "end": "2015-09-08T17:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 24,
+        "gust": 6,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 8,
+        "high": 0,
+        "middle": 0,
+        "low": 8,
+        "fog": 0
+      },
+      "start": "2015-09-08T17:00:00+02:00",
+      "end": "2015-09-08T18:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 12,
+        "gust": 5,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 38,
+        "high": 38,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T18:00:00+02:00",
+      "end": "2015-09-08T19:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 7,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T19:00:00+02:00",
+      "end": "2015-09-08T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 360,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1025
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T20:00:00+02:00",
+      "end": "2015-09-08T21:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 18,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1025
+      },
+      "cloudCover": {
+        "value": 35,
+        "high": 35,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T21:00:00+02:00",
+      "end": "2015-09-08T22:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 45,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1026
+      },
+      "cloudCover": {
+        "value": 4,
+        "high": 4,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T22:00:00+02:00",
+      "end": "2015-09-08T23:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 38,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1027
+      },
+      "cloudCover": {
+        "value": 0,
+        "high": 0,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T23:00:00+02:00",
+      "end": "2015-09-09T00:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 41,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1027
+      },
+      "cloudCover": {
+        "value": 1,
+        "high": 1,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T00:00:00+02:00",
+      "end": "2015-09-09T01:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 41,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1027
+      },
+      "cloudCover": {
+        "value": 1,
+        "high": 1,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T01:00:00+02:00",
+      "end": "2015-09-09T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 40,
+        "gust": 4,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1028
+      },
+      "cloudCover": {
+        "value": 1,
+        "high": 1,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T02:00:00+02:00",
+      "end": "2015-09-09T03:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 43,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1028
+      },
+      "cloudCover": {
+        "value": 1,
+        "high": 1,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T03:00:00+02:00",
+      "end": "2015-09-09T04:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 42,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 1,
+        "high": 1,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T04:00:00+02:00",
+      "end": "2015-09-09T05:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 43,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 7,
+        "high": 7,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T05:00:00+02:00",
+      "end": "2015-09-09T06:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 48,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 3,
+        "high": 3,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T06:00:00+02:00",
+      "end": "2015-09-09T07:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 54,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 0,
+        "high": 0,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T07:00:00+02:00",
+      "end": "2015-09-09T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 46,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 0,
+        "high": 0,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T08:00:00+02:00",
+      "end": "2015-09-09T09:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 26,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 9,
+        "high": 9,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T09:00:00+02:00",
+      "end": "2015-09-09T10:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 273,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 32,
+        "high": 32,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T10:00:00+02:00",
+      "end": "2015-09-09T11:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 257,
+        "gust": 3,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 15,
+        "high": 15,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T11:00:00+02:00",
+      "end": "2015-09-09T12:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 252,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 2,
+        "high": 2,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T12:00:00+02:00",
+      "end": "2015-09-09T13:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 242,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 2,
+        "high": 2,
+        "middle": 0,
+        "low": 1,
+        "fog": 0
+      },
+      "start": "2015-09-09T13:00:00+02:00",
+      "end": "2015-09-09T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 242,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 6,
+        "high": 5,
+        "middle": 0,
+        "low": 1,
+        "fog": 0
+      },
+      "start": "2015-09-09T14:00:00+02:00",
+      "end": "2015-09-09T15:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 247,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 67,
+        "high": 66,
+        "middle": 0,
+        "low": 3,
+        "fog": 0
+      },
+      "start": "2015-09-09T15:00:00+02:00",
+      "end": "2015-09-09T16:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 250,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 96,
+        "high": 95,
+        "middle": 0,
+        "low": 3,
+        "fog": 0
+      },
+      "start": "2015-09-09T16:00:00+02:00",
+      "end": "2015-09-09T17:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 253,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 95,
+        "high": 95,
+        "middle": 0,
+        "low": 1,
+        "fog": 0
+      },
+      "start": "2015-09-09T17:00:00+02:00",
+      "end": "2015-09-09T18:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 237,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T18:00:00+02:00",
+      "end": "2015-09-09T19:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 25
+      },
+      "wind": {
+        "direction": 226,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T19:00:00+02:00",
+      "end": "2015-09-09T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 17
+      },
+      "wind": {
+        "direction": 252,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 95,
+        "high": 95,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T20:00:00+02:00",
+      "end": "2015-09-09T21:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 16
+      },
+      "wind": {
+        "direction": 342,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 33,
+        "high": 33,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T21:00:00+02:00",
+      "end": "2015-09-09T22:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 14
+      },
+      "wind": {
+        "direction": 122,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 19,
+        "high": 19,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T22:00:00+02:00",
+      "end": "2015-09-09T23:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 12
+      },
+      "wind": {
+        "direction": 92,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 48,
+        "high": 48,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T23:00:00+02:00",
+      "end": "2015-09-10T00:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 11
+      },
+      "wind": {
+        "direction": 79,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 44,
+        "high": 44,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T00:00:00+02:00",
+      "end": "2015-09-10T01:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 11
+      },
+      "wind": {
+        "direction": 92,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 66,
+        "high": 66,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T01:00:00+02:00",
+      "end": "2015-09-10T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 10
+      },
+      "wind": {
+        "direction": 74,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T02:00:00+02:00",
+      "end": "2015-09-10T03:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 10
+      },
+      "wind": {
+        "direction": 80,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T03:00:00+02:00",
+      "end": "2015-09-10T04:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 10
+      },
+      "wind": {
+        "direction": 78,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T04:00:00+02:00",
+      "end": "2015-09-10T05:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 9
+      },
+      "wind": {
+        "direction": 71,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T05:00:00+02:00",
+      "end": "2015-09-10T06:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 9
+      },
+      "wind": {
+        "direction": 66,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T06:00:00+02:00",
+      "end": "2015-09-10T07:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 9
+      },
+      "wind": {
+        "direction": 64,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 87,
+        "high": 87,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T07:00:00+02:00",
+      "end": "2015-09-10T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 11
+      },
+      "wind": {
+        "direction": 38,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 63,
+        "high": 63,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T08:00:00+02:00",
+      "end": "2015-09-10T09:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 13
+      },
+      "wind": {
+        "direction": 344,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 48,
+        "high": 48,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T09:00:00+02:00",
+      "end": "2015-09-10T10:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 15
+      },
+      "wind": {
+        "direction": 274,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 30,
+        "high": 30,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T10:00:00+02:00",
+      "end": "2015-09-10T11:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 17
+      },
+      "wind": {
+        "direction": 255,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 26,
+        "high": 26,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T11:00:00+02:00",
+      "end": "2015-09-10T12:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 18
+      },
+      "wind": {
+        "direction": 245,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 85,
+        "high": 85,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T12:00:00+02:00",
+      "end": "2015-09-10T13:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 19
+      },
+      "wind": {
+        "direction": 244,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T13:00:00+02:00",
+      "end": "2015-09-10T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 20
+      },
+      "wind": {
+        "direction": 244,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T14:00:00+02:00",
+      "end": "2015-09-10T15:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 21
+      },
+      "wind": {
+        "direction": 236,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T15:00:00+02:00",
+      "end": "2015-09-10T16:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 21
+      },
+      "wind": {
+        "direction": 235,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T16:00:00+02:00",
+      "end": "2015-09-10T17:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 21
+      },
+      "wind": {
+        "direction": 249,
+        "gust": 2,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T17:00:00+02:00",
+      "end": "2015-09-10T18:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 21
+      },
+      "wind": {
+        "direction": 10,
+        "gust": 1,
+        "speed": 0
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T18:00:00+02:00",
+      "end": "2015-09-10T19:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 20
+      },
+      "wind": {
+        "direction": 48,
+        "gust": 4,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T19:00:00+02:00",
+      "end": "2015-09-10T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 18
+      },
+      "wind": {
+        "direction": 51,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 99,
+        "high": 99,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T20:00:00+02:00",
+      "end": "2015-09-10T21:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 17
+      },
+      "wind": {
+        "direction": 61,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 84,
+        "high": 84,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T21:00:00+02:00",
+      "end": "2015-09-10T22:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 15
+      },
+      "wind": {
+        "direction": 60,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 72,
+        "high": 72,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T22:00:00+02:00",
+      "end": "2015-09-10T23:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 13
+      },
+      "wind": {
+        "direction": 60,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 70,
+        "high": 70,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T23:00:00+02:00",
+      "end": "2015-09-11T00:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 12
+      },
+      "wind": {
+        "direction": 61,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 62,
+        "high": 62,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-11T00:00:00+02:00",
+      "end": "2015-09-11T01:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 2,
+        "clouds": 1,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 12
+      },
+      "wind": {
+        "direction": 61,
+        "gust": 4,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 50,
+        "high": 50,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-11T01:00:00+02:00",
+      "end": "2015-09-11T02:00:00+02:00"
+    }
+  ],
+  "longIntervals": [
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 20
+      },
+      "wind": {
+        "direction": 345,
+        "gust": 5,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 5,
+        "high": 0,
+        "middle": 0,
+        "low": 5,
+        "fog": 0
+      },
+      "start": "2015-09-08T14:00:00+02:00",
+      "end": "2015-09-08T17:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 20,
+        "min": 12,
+        "max": 19
+      },
+      "wind": {
+        "direction": 12,
+        "gust": 5,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 38,
+        "high": 38,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-08T18:00:00+02:00",
+      "end": "2015-09-09T00:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 12,
+        "min": 10,
+        "max": 12
+      },
+      "wind": {
+        "direction": 41,
+        "gust": 4,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1027
+      },
+      "cloudCover": {
+        "value": 1,
+        "high": 1,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T00:00:00+02:00",
+      "end": "2015-09-09T06:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 1,
+        "clouds": 0,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 10,
+        "min": 10,
+        "max": 17
+      },
+      "wind": {
+        "direction": 48,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 3,
+        "high": 3,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T06:00:00+02:00",
+      "end": "2015-09-09T12:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 17,
+        "min": 18,
+        "max": 20
+      },
+      "wind": {
+        "direction": 252,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 2,
+        "high": 2,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T12:00:00+02:00",
+      "end": "2015-09-09T18:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 19,
+        "min": 11,
+        "max": 18
+      },
+      "wind": {
+        "direction": 237,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1029
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-09T18:00:00+02:00",
+      "end": "2015-09-10T00:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 11,
+        "min": 9,
+        "max": 11
+      },
+      "wind": {
+        "direction": 79,
+        "gust": 1,
+        "speed": 1
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 44,
+        "high": 44,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T00:00:00+02:00",
+      "end": "2015-09-10T06:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 9,
+        "min": 9,
+        "max": 18
+      },
+      "wind": {
+        "direction": 66,
+        "gust": 2,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 97,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T06:00:00+02:00",
+      "end": "2015-09-10T12:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 18,
+        "min": 19,
+        "max": 21
+      },
+      "wind": {
+        "direction": 245,
+        "gust": 3,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 85,
+        "high": 85,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T12:00:00+02:00",
+      "end": "2015-09-10T18:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "value": 0.0
+      },
+      "temperature": {
+        "value": 21,
+        "min": 12,
+        "max": 20
+      },
+      "wind": {
+        "direction": 10,
+        "gust": 1,
+        "speed": 0
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-10T18:00:00+02:00",
+      "end": "2015-09-11T00:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 2
+      },
+      "temperature": {
+        "value": 11,
+        "min": 12,
+        "max": 13
+      },
+      "wind": {
+        "direction": 58,
+        "gust": 4,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 20,
+        "high": 20,
+        "middle": 0,
+        "low": 0,
+        "fog": 0
+      },
+      "start": "2015-09-11T02:00:00+02:00",
+      "end": "2015-09-11T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 8
+      },
+      "temperature": {
+        "value": 12,
+        "min": 12,
+        "max": 18
+      },
+      "wind": {
+        "direction": 55,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1032
+      },
+      "cloudCover": {
+        "value": 66,
+        "high": 0,
+        "middle": 0,
+        "low": 63,
+        "fog": 0
+      },
+      "start": "2015-09-11T08:00:00+02:00",
+      "end": "2015-09-11T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 6
+      },
+      "temperature": {
+        "value": 18,
+        "min": 16,
+        "max": 19
+      },
+      "wind": {
+        "direction": 132,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1031
+      },
+      "cloudCover": {
+        "value": 76,
+        "high": 0,
+        "middle": 0,
+        "low": 75,
+        "fog": 0
+      },
+      "start": "2015-09-11T14:00:00+02:00",
+      "end": "2015-09-11T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 10
+      },
+      "temperature": {
+        "value": 16,
+        "min": 14,
+        "max": 16
+      },
+      "wind": {
+        "direction": 108,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 58,
+        "high": 0,
+        "middle": 1,
+        "low": 48,
+        "fog": 0
+      },
+      "start": "2015-09-11T20:00:00+02:00",
+      "end": "2015-09-12T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 3,
+        "clouds": 2,
+        "precip": 0,
+        "var": "Moon",
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 12
+      },
+      "temperature": {
+        "value": 14,
+        "min": 13,
+        "max": 13
+      },
+      "wind": {
+        "direction": 62,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1030
+      },
+      "cloudCover": {
+        "value": 64,
+        "high": 0,
+        "middle": 28,
+        "low": 34,
+        "fog": 0
+      },
+      "start": "2015-09-12T02:00:00+02:00",
+      "end": "2015-09-12T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 5,
+        "clouds": 2,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "var": "Sun",
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 1.7,
+        "probabilityOfPrecipitation": 31
+      },
+      "temperature": {
+        "value": 13,
+        "min": 12,
+        "max": 16
+      },
+      "wind": {
+        "direction": 67,
+        "speed": 2
+      },
+      "pressure": {
+        "value": 1027
+      },
+      "cloudCover": {
+        "value": 88,
+        "high": 0,
+        "middle": 27,
+        "low": 77,
+        "fog": 0
+      },
+      "start": "2015-09-12T08:00:00+02:00",
+      "end": "2015-09-12T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 2.6,
+        "probabilityOfPrecipitation": 31
+      },
+      "temperature": {
+        "value": 16,
+        "min": 15,
+        "max": 17
+      },
+      "wind": {
+        "direction": 104,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1024
+      },
+      "cloudCover": {
+        "value": 99,
+        "high": 1,
+        "middle": 61,
+        "low": 87,
+        "fog": 0
+      },
+      "start": "2015-09-12T14:00:00+02:00",
+      "end": "2015-09-12T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 2.2,
+        "probabilityOfPrecipitation": 49
+      },
+      "temperature": {
+        "value": 15,
+        "min": 14,
+        "max": 15
+      },
+      "wind": {
+        "direction": 83,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1023
+      },
+      "cloudCover": {
+        "value": 95,
+        "high": 52,
+        "middle": 67,
+        "low": 46,
+        "fog": 0
+      },
+      "start": "2015-09-12T20:00:00+02:00",
+      "end": "2015-09-13T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 2.8,
+        "probabilityOfPrecipitation": 51
+      },
+      "temperature": {
+        "value": 14,
+        "min": 12,
+        "max": 14
+      },
+      "wind": {
+        "direction": 76,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1022
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 54,
+        "middle": 76,
+        "low": 80,
+        "fog": 0
+      },
+      "start": "2015-09-13T02:00:00+02:00",
+      "end": "2015-09-13T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 3.1,
+        "probabilityOfPrecipitation": 55
+      },
+      "temperature": {
+        "value": 13,
+        "min": 12,
+        "max": 15
+      },
+      "wind": {
+        "direction": 115,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1019
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 93,
+        "middle": 84,
+        "low": 98,
+        "fog": 0
+      },
+      "start": "2015-09-13T08:00:00+02:00",
+      "end": "2015-09-13T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 2.7,
+        "probabilityOfPrecipitation": 55
+      },
+      "temperature": {
+        "value": 15,
+        "min": 14,
+        "max": 16
+      },
+      "wind": {
+        "direction": 54,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1018
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 69,
+        "middle": 81,
+        "low": 81,
+        "fog": 0
+      },
+      "start": "2015-09-13T14:00:00+02:00",
+      "end": "2015-09-13T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 2.7,
+        "probabilityOfPrecipitation": 55
+      },
+      "temperature": {
+        "value": 14,
+        "min": 14,
+        "max": 15
+      },
+      "wind": {
+        "direction": 101,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1017
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 75,
+        "middle": 95,
+        "low": 74,
+        "fog": 0
+      },
+      "start": "2015-09-13T20:00:00+02:00",
+      "end": "2015-09-14T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 2.4,
+        "probabilityOfPrecipitation": 47
+      },
+      "temperature": {
+        "value": 14,
+        "min": 13,
+        "max": 14
+      },
+      "wind": {
+        "direction": 114,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1017
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 97,
+        "middle": 78,
+        "low": 94,
+        "fog": 0
+      },
+      "start": "2015-09-14T02:00:00+02:00",
+      "end": "2015-09-14T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 2.8,
+        "probabilityOfPrecipitation": 45
+      },
+      "temperature": {
+        "value": 14,
+        "min": 13,
+        "max": 15
+      },
+      "wind": {
+        "direction": 93,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1015
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 98,
+        "middle": 97,
+        "low": 100,
+        "fog": 0
+      },
+      "start": "2015-09-14T08:00:00+02:00",
+      "end": "2015-09-14T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 2.6,
+        "probabilityOfPrecipitation": 49
+      },
+      "temperature": {
+        "value": 15,
+        "min": 15,
+        "max": 16
+      },
+      "wind": {
+        "direction": 109,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1013
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 98,
+        "middle": 97,
+        "low": 91,
+        "fog": 0
+      },
+      "start": "2015-09-14T14:00:00+02:00",
+      "end": "2015-09-14T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 3.5,
+        "probabilityOfPrecipitation": 61
+      },
+      "temperature": {
+        "value": 15,
+        "min": 15,
+        "max": 16
+      },
+      "wind": {
+        "direction": 108,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1012
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 98,
+        "middle": 95,
+        "low": 69,
+        "fog": 0
+      },
+      "start": "2015-09-14T20:00:00+02:00",
+      "end": "2015-09-15T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0,
+        "probabilityOfPrecipitation": 2
+      },
+      "temperature": {
+        "value": 15,
+        "min": 14,
+        "max": 14
+      },
+      "wind": {
+        "direction": 151,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1009
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 88,
+        "low": 97,
+        "fog": 0
+      },
+      "start": "2015-09-15T02:00:00+02:00",
+      "end": "2015-09-15T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 10,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0,
+        "probabilityOfPrecipitation": 3
+      },
+      "temperature": {
+        "value": 14,
+        "min": 13,
+        "max": 15
+      },
+      "wind": {
+        "direction": 82,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1008
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 97,
+        "low": 100,
+        "fog": 0
+      },
+      "start": "2015-09-15T08:00:00+02:00",
+      "end": "2015-09-15T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0
+      },
+      "temperature": {
+        "value": 15,
+        "min": 14,
+        "max": 16
+      },
+      "wind": {
+        "direction": 148,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1006
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 99,
+        "low": 95,
+        "fog": 0
+      },
+      "start": "2015-09-15T14:00:00+02:00",
+      "end": "2015-09-15T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0,
+        "probabilityOfPrecipitation": 5
+      },
+      "temperature": {
+        "value": 14,
+        "min": 14,
+        "max": 15
+      },
+      "wind": {
+        "direction": 72,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1007
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 100,
+        "low": 95,
+        "fog": 0
+      },
+      "start": "2015-09-15T20:00:00+02:00",
+      "end": "2015-09-16T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0,
+        "probabilityOfPrecipitation": 8
+      },
+      "temperature": {
+        "value": 14,
+        "min": 12,
+        "max": 13
+      },
+      "wind": {
+        "direction": 110,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1006
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 99,
+        "low": 100,
+        "fog": 0
+      },
+      "start": "2015-09-16T02:00:00+02:00",
+      "end": "2015-09-16T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0,
+        "probabilityOfPrecipitation": 6
+      },
+      "temperature": {
+        "value": 13,
+        "min": 12,
+        "max": 14
+      },
+      "wind": {
+        "direction": 114,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1007
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 100,
+        "low": 100,
+        "fog": 0
+      },
+      "start": "2015-09-16T08:00:00+02:00",
+      "end": "2015-09-16T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0
+      },
+      "temperature": {
+        "value": 14,
+        "min": 14,
+        "max": 16
+      },
+      "wind": {
+        "direction": 95,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1005
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 99,
+        "middle": 99,
+        "low": 91,
+        "fog": 0
+      },
+      "start": "2015-09-16T14:00:00+02:00",
+      "end": "2015-09-16T20:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0,
+        "probabilityOfPrecipitation": 0
+      },
+      "temperature": {
+        "value": 14,
+        "min": 14,
+        "max": 15
+      },
+      "wind": {
+        "direction": 157,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1006
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 93,
+        "middle": 97,
+        "low": 56,
+        "fog": 0
+      },
+      "start": "2015-09-16T20:00:00+02:00",
+      "end": "2015-09-17T02:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 4,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": false
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 29
+      },
+      "temperature": {
+        "value": 14,
+        "min": 14,
+        "max": 15
+      },
+      "wind": {
+        "direction": 187,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1012
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 55,
+        "middle": 28,
+        "low": 54,
+        "fog": 0
+      },
+      "start": "2015-09-17T02:00:00+02:00",
+      "end": "2015-09-17T08:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 9,
+        "clouds": 3,
+        "precipPhase": "Rain",
+        "precip": 2,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 3.5,
+        "probabilityOfPrecipitation": 31
+      },
+      "temperature": {
+        "value": 15,
+        "min": 12,
+        "max": 15
+      },
+      "wind": {
+        "direction": 52,
+        "speed": 4
+      },
+      "pressure": {
+        "value": 1002
+      },
+      "cloudCover": {
+        "value": 100,
+        "high": 100,
+        "middle": 95,
+        "low": 100,
+        "fog": 0
+      },
+      "start": "2015-09-17T08:00:00+02:00",
+      "end": "2015-09-17T14:00:00+02:00"
+    },
+    {
+      "symbol": {
+        "n": 4,
+        "clouds": 3,
+        "precip": 0,
+        "sunup": true
+      },
+      "precipitation": {
+        "value": 0.0,
+        "probabilityOfPrecipitation": 29
+      },
+      "temperature": {
+        "value": 15,
+        "min": 14,
+        "max": 16
+      },
+      "wind": {
+        "direction": 186,
+        "speed": 3
+      },
+      "pressure": {
+        "value": 1012
+      },
+      "cloudCover": {
+        "value": 97,
+        "high": 73,
+        "middle": 34,
+        "low": 60,
+        "fog": 0
+      },
+      "start": "2015-09-17T14:00:00+02:00",
+      "end": "2015-09-17T20:00:00+02:00"
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/locations/id/1-72837/forecast"
+    }
+  }
+}

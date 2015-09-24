@@ -1,0 +1,14 @@
+{
+  "date": "2015-02-06T00:00:00",
+  "sunNeverRise": false,
+  "sunNeverSet": false,
+  "sunRise": "2015-02-06T08:19:13",
+  "sunSet": "2015-02-06T16:43:45",
+  "moonRise": "2015-02-06T20:06:22",
+  "moonSet": "2015-02-06T08:35:50",
+  "_links": {
+    "self": {
+      "href": "/locations/id/celestialevent"
+    }
+  }
+}

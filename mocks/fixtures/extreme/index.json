@@ -1,0 +1,36 @@
+{
+  "times": [
+    {
+      "name": "Cato",
+      "phase": "B",
+      "from": "2011-12-24T09:55:50",
+      "to": "2011-12-27T09:55:50",
+      "subtitleDescription": "Beskrivelse av værsituasjonen:",
+      "description": "Lavt trykk kombinert med springflo søndag ettermiddag gir kraftig forhøyet tidevann.",
+      "subtitleLocations": "Ekstremværet ` Cato ` gjelder for det geografiske området:",
+      "locations": [
+        {
+          "name": "Salten, Ofoten, Lofoten, Vesterålen, Troms og kyststrøkene i Vest-Finnmark",
+          "header": "Salten, Ofoten, Lofoten, Vesterålen, Troms og kyststrøkene i Vest-Finnmark",
+          "text": "I nordlige Nordland, Troms og Vest-Finnmark ventes søndag 25. desember ekstremt høyt vannstand ved flo midt på dagen. Vannstandsprognosene gir 60-85 cm over vannstanden i tidevannstabellen. Vannstanden ventes likevel å være ca 20 cm lavere enn under ekstremværet Berit. I Nordland sør for Vesterålen ventes i tillegg sørvestlig periodevis full storm 25, og bølgehøyde på 8-11 meter."
+        }
+      ]
+    },
+    {
+      "name": "Dagmar",
+      "phase": "B",
+      "from": "2011-12-24T10:15:13",
+      "to": "2011-12-27T10:15:13",
+      "subtitleDescription": "Beskrivelse av værsituasjonen:",
+      "description": "Et lavtrykk nær New Foundland, flytter seg med ca 100km/t og forsterker seg til et stormsenter, det ventes nær Helgeland natt til mandag. Den sterkeste vinden sør for lavtrykket kommer inn mot Møre og Romsdal tidlig natt til mandag, i Trøndelag noen timer seinere. Lavtrykket svekkes sakte når det passerer. Men stormen vil mange steder være blant de 10 sterkeste de siste 30 år. Vinden ventes å bli noe svakere enn Nyttårsorkanen (1/1-92) i området sør for Trondheimsfjorden\n          \nDet astronomiske tidevannet er høyt, tidspunktet for sterkest vind faller til en viss grad sammen med tidspunktet for den høyeste floen (omkring midnatt), særlig sør for Trondheimsfjorden. Den beregnede vannstanden er omkring grensen for ekstrem vannstand, ogkombinert med høye bølger på grunn av sterk vind er det grunn til å ta hensyn til dette.",
+      "subtitleLocations": "Ekstremværet ` Dagmar ` gjelder for det geografiske området:",
+      "locations": [
+        {
+          "name": "Møre og Romsdal og Trøndelag",
+          "header": "Møre og Romsdal og Trøndelag",
+          "text": "Natt til mandag ventes det sørvestlig sterk storm 30 m/s på kysten. Vinden dreier vestlig og vil etter kort tid minke. I dreiningen kan vindkastene stedvis komme opp i 40-45 m/s inn over land.\n          \nHøy vannstand kombinert med høye bølger ventes samtidig. \n          \nDen sterkeste vinden ventes på strekningen mellom Ålesund og Halten. I Møre og Romsdal ventes sterkest vind natt til mandag 26. desember omkring kl 00-02, og i Trøndelag mellom kl01 og kl04."
+        }
+      ]
+    }
+  ]
+}

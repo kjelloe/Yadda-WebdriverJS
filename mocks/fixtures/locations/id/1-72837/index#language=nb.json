@@ -1,0 +1,41 @@
+{
+  "category": {
+    "id": "CB09",
+    "name": "By"
+  },
+  "id": "1-72837",
+  "name": "Oslo FAKEDATA",
+  "position": {
+    "lat": 59.91273,
+    "lon": 10.74609
+  },
+  "elevation": 10,
+  "timeZone": "Europe/Oslo",
+  "urlPath": "Norge/Oslo/Oslo/Oslo",
+  "country": {
+    "id": "NO",
+    "name": "Norge FAKEDATA"
+  },
+  "region": {
+    "id": "NO/03",
+    "name": "Oslo FAKEDATA"
+  },
+  "subregion": {
+    "id": "NO/03/0301",
+    "name": "Oslo FAKEDATA"
+  },
+  "_links": {
+    "self": {
+      "href": "/locations/id/1-72837"
+    },
+    "forecast": {
+      "href": "/locations/id/1-72837/forecast"
+    },
+    "radar": {
+      "href": "/locations/id/1-72837/radar"
+    },
+    "celestialevent": {
+      "href": "/locations/id/1-72837/celestialevent"
+    }
+  }
+}
