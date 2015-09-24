@@ -6,8 +6,8 @@
 
 var fakeProxy = require('./apioxy_embedded.js'); // NOTE: Partial reuse of apioxy but adapted to in process spawning and in memory updating of faked data
 var fixtureDirectory = path.resolve(__dirname + '/fixtures');
-var fakeProxyPort = parseInt(process.env.API_PROXY ? process.env.API_PROXY : 3009); // NOTE: Needs to be configured in yr frontend
-var forwardProxyUrl = (process.env.API_URL_SERVER ? process.env.API_URL_SERVER : 'http://yrapi.cloudapp.net/api/v0/');
+var fakeProxyPort = parseInt(process.env.API_PROXY ? process.env.API_PROXY : 3009); // NOTE: Needs to be configured 
+var forwardProxyUrl = (process.env.API_URL_SERVER ? process.env.API_URL_SERVER : '_some_default_url');
 
 module.exports = {
   init : function(instanceCounter, fakeEndpointList) {
